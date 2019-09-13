@@ -1,0 +1,13 @@
+<div class="jt-customers-list">
+  <h2 class="jt-customers-list__title">
+    Customers List
+  </h2>
+  <div class="jt-customers-list__container" *ngIf="customers$ | async as customers">
+    <div *ngFor="let customer of customers"
+         class="jt-customers-list__item"
+         [ngClass]="{'_active': customer.id === (activeCustomer ? activeCustomer.id : '')}"
+         (click)="setActiveCustomer(customer)">
+      {{customer.firstName}} {{customer.lastName}}
+    </div>
+  </div>
+</div>

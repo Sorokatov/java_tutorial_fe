@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {RestApiService} from "./services/rest-api.service";
+import {Customer} from "./models/customer";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'java-turorial';
+
+  constructor() {
+
+  }
 }
