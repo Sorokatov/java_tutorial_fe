@@ -1,0 +1,18 @@
+<div class="row mb-2">
+  <div class="w-100 d-flex align-items-center">
+    <h2 class="h2">Departments</h2>
+    <div class="btn-group ml-auto ">
+      <button class="btn btn-primary" (click)="openAddDepartmentPopup()">Add</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <ng-container *ngIf="departments">
+    <ul class="list-group col-4">
+      <button *ngFor="let department of departments"
+              class="list-group-item text-left">
+        {{department.name}}
+      </button>
+    </ul>
+  </ng-container>
+</div>

@@ -1,0 +1,22 @@
+<form [formGroup]="editCustomerForm" (ngSubmit)="onSubmit()">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Edit Customer</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <input type="text" hidden formControlName="id">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text"  class="form-control" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" [disabled]="editCustomerForm.invalid" class="btn btn-primary">Save</button>
+  </div>
+</form>

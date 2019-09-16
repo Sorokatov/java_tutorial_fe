@@ -2,16 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eaf4ff;
-  font-family: Verdana, sans-serif;
 }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-
-.container {
-  width: 1170px;
-  margin: 0 auto;
+.list-group-item {
+  cursor: pointer;
 }
